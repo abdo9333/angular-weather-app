@@ -1,55 +1,24 @@
-<div class="conatiner">
-    <div class="header">
-        <div class="titles">
-            <h3>{{ name }}</h3>
-        <h4>{{country}}</h4>
-        </div>
-        <div class="dates">
-            <p>{{ date }} <span>{{ hour }}</span></p>
-        </div>
-        
+<div class="container">
+  <div class="widget">
+    <div class="details">
+      <h3>{{ name }} <span> , {{country}}</span></h3>
+      <div class="temperature">{{ tmp }}°</div>
+
+      <div class="icon"> <img src="{{ icon }}" /></div>
+      <div class="summary">
+        <p class="summaryText">{{ condition }}</p>
+      </div>
+      <div class="precipitation">Humidité : {{ humidity }}%</div>
+      <div class="wind">Vitesse de vent : {{ wnd_spd }}</div>
+      <div class="wind">Direction de vent : {{ wnd_dir }}</div>
     </div>
-    
-    <div class="row2">
-        <div class="temp">
-            <p> {{ tmp }}°C</p>
-        </div>
-        <div class="humidtiy">
-            <p> humidité :  {{ humidity }}% </p>
-        </div>
-        <div class="images">
-            <img src="{{ icon }}"/>
-        <p>{{ condition }}</p>
-        </div>
+    <div class="pictoBackdrop"></div>
+    <div class="pictoFrame"></div>
+    <div class="pictoCloudBig"></div>
+    <div class="pictoCloudFill"></div>
+    <div class="pictoCloudSmall"></div>
+    <div class="date">
+      <p class="summaryText">Date : {{ date }} {{hour}}</p>
     </div>
-    <div class="row3">
-        <div class="images_flag">
-            <img src=" https://www.icone-png.com/png/11/10869.png" />
-        </div>
-        <div class="text">
-            <p>Vitesse de vent : {{ wnd_spd }} </p>
-            <p>Direction de vent : {{ wnd_dir }}</p>
-        </div>
-        
-       
-    </div>
+  </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
