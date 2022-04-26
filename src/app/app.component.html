@@ -1,24 +1,25 @@
 <div class="container">
-  <div class="widget">
-    <div class="details">
-      <h3>{{ name }} <span> , {{country}}</span></h3>
-      <div class="temperature">{{ tmp }}°</div>
+  <div class="widget" >
+    <div class="details" >
+      <h3>{{ city_info.name }} <span> , {{city_info.country}}</span></h3>
 
-      <div class="icon"> <img src="{{ icon }}" /></div>
-      <div class="summary">
-        <p class="summaryText">{{ condition }}</p>
-      </div>
-      <div class="precipitation">Humidité : {{ humidity }}%</div>
-      <div class="wind">Vitesse de vent : {{ wnd_spd }}</div>
-      <div class="wind">Direction de vent : {{ wnd_dir }}</div>
-    </div>
-    <div class="pictoBackdrop"></div>
-    <div class="pictoFrame"></div>
-    <div class="pictoCloudBig"></div>
-    <div class="pictoCloudFill"></div>
-    <div class="pictoCloudSmall"></div>
-    <div class="date">
-      <p class="summaryText">Date : {{ date }} {{hour}}</p>
+          <div class="temperature">{{ current_condition.tmp }}°</div>
+
+          <div class="icon"> <img src="{{ current_condition.icon }}" /></div>
+          <div class="summary">
+            <p class="summaryText">{{ current_condition.condition }}</p>
+          </div>
+          <div class="precipitation">Humidité : {{ current_condition.humidity }}%</div>
+          <div class="wind">Vitesse de vent : {{ current_condition.wnd_spd }}</div>
+          <div class="wind">Direction de vent : {{ current_condition.wnd_dir }}</div>
+        </div>
+        <div class="pictoBackdrop"></div>
+        <div class="pictoFrame"></div>
+        <div class="pictoCloudBig"></div>
+        <div class="pictoCloudFill"></div>
+        <div class="pictoCloudSmall"></div>
+        <div class="date">
+          <p class="summaryText">Date : {{ current_condition.date }} {{current_condition.hour}}</p>
+        </div>
     </div>
   </div>
-</div>

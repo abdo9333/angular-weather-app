@@ -1,21 +1,11 @@
 export interface ApiWeather{
 
-  name:string;
-  city_info : Array<city_info>;
-  current_condition : Array<current_condition>;
-
-
-}
-
-export interface APIResponse<T> {
-  results: Array<T>;
-}
-
-interface city_info {
   name: string;
   country: string;
-  }
-interface current_condition{
+
+}
+export interface  Current_Condition{
+
   date: string;
   hour: string;
   wnd_spd: string;
@@ -24,4 +14,12 @@ interface current_condition{
   condition: string;
   tmp: string;
   icon: string;
+
 }
+
+export interface APIResponse<T , M> {
+  city_info: Array<T>;
+  current_condition : Array<M>
+}
+
+
